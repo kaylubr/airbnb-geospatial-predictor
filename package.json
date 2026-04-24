@@ -1,0 +1,25 @@
+{
+  "name": "airbnb-ml-pipeline",
+  "version": "1.0.0",
+  "description": "Complete ML pipeline for Airbnb investment analysis",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "start": "node main.js",
+    "dev": "node --watch main.js",
+    "advise": "node advisor.js"
+  },
+  "keywords": [
+    "machine-learning",
+    "airbnb",
+    "real-estate",
+    "geospatial"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "ml-random-forest": "^2.1.0",
+    "node-cache": "^5.1.2"
+  }
+}
