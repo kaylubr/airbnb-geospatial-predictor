@@ -1,8 +1,8 @@
-# 🏠 Airbnb Investment ML Pipeline
+# Airbnb Investment ML Pipeline
 
 A complete, production-ready machine learning pipeline for Airbnb investment analysis using Node.js.
 
-## 🎯 Features
+##  Features
 
 - **Data Integration**: Combines listings, calendar rates, and reviews data
 - **Feature Engineering**: Automated temporal aggregations and statistical features
@@ -10,19 +10,19 @@ A complete, production-ready machine learning pipeline for Airbnb investment ana
 - **Machine Learning**: Random Forest classifier/regressor with feature importance
 - **Modular Architecture**: Clean, maintainable code structure
 
-## 📦 Installation
+## Installation
 
 ```bash
 npm install
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
 npm start
 ```
 
-## 📊 Data Sources
+## Data Sources
 
 The pipeline expects three JSON files:
 
@@ -41,7 +41,7 @@ The pipeline expects three JSON files:
    - listing_id, date
    - num_reviews, reviewers
 
-## 🔧 Pipeline Architecture
+## Pipeline Architecture
 
 ```
 ┌─────────────────┐
@@ -65,7 +65,7 @@ The pipeline expects three JSON files:
 └─────────────────┘
 ```
 
-## 📁 Module Structure
+## Module Structure
 
 ### `dataLoader.js`
 - Loads JSON/JSONL files
@@ -96,7 +96,7 @@ The pipeline expects three JSON files:
 - Configuration management
 - Results generation and export
 
-## 🎓 Generated Features
+## Generated Features
 
 ### Temporal Features
 - `avg_occupancy`, `std_occupancy`, `max_occupancy`
@@ -121,7 +121,7 @@ The pipeline expects three JSON files:
 - `nearest_attraction_distance`
 - `attraction_density_1km`, `attraction_density_3km`
 
-## ⚙️ Configuration
+## Configuration
 
 Edit the `config` object in `main.js`:
 
@@ -144,7 +144,7 @@ Predicts investment score categories:
 ### Regression Mode
 Predicts continuous values (revenue, occupancy, etc.)
 
-## 📈 Output Files
+## Output Files
 
 1. **feature_table.json**
    - Complete unified feature dataset
@@ -159,7 +159,7 @@ Predicts continuous values (revenue, occupancy, etc.)
    - Ranked list of feature importance
    - Helps understand prediction drivers
 
-## 🔍 Geospatial Analysis
+## Geospatial Analysis
 
 The pipeline uses OpenStreetMap to fetch real attractions in Manila:
 
@@ -172,7 +172,7 @@ The pipeline uses OpenStreetMap to fetch real attractions in Manila:
 
 Distance calculations use the **Haversine formula** for accurate great-circle distances.
 
-## 🧠 Machine Learning
+## Machine Learning
 
 ### Model: Random Forest
 - **Ensemble method**: Combines multiple decision trees
@@ -191,7 +191,7 @@ Distance calculations use the **Haversine formula** for accurate great-circle di
 - MAE (Mean Absolute Error)
 - R² Score
 
-## 🔄 Extending the Pipeline
+## Extending the Pipeline
 
 ### Add Custom Features
 
@@ -218,34 +218,34 @@ node["amenity"="hospital"](area.searchArea);
 
 Replace Random Forest with other algorithms by modifying `model.js`.
 
-## 🚨 Error Handling
+## Error Handling
 
 - **Missing coordinates**: Listings without lat/lon are skipped
 - **API failures**: Falls back to known Manila attractions
 - **Data validation**: Reports on data quality issues
 - **Async operations**: Proper error catching throughout
 
-## 📊 Sample Output
+## Sample Output
 
 ```
 ═══════════════════════════════════════════════════
 STEP 4: MACHINE LEARNING MODEL TRAINING
 ═══════════════════════════════════════════════════
 
-🎯 Preparing dataset with target: total_revenue
+- Preparing dataset with target: total_revenue
 
-📊 Selected 25 feature columns:
+- Selected 25 feature columns:
    avg_occupancy, avg_revenue, avg_daily_rate, ...
 
-✅ Prepared dataset with 150 samples
+- Prepared dataset with 150 samples
 
-📊 Classification Results:
+- Classification Results:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Accuracy: 75.00%
 Correct predictions: 22 / 30
 ```
 
-## 🛠️ Troubleshooting
+## Troubleshooting
 
 ### OpenStreetMap timeout
 Increase timeout in `geo.js` or use fallback attractions.
@@ -256,7 +256,7 @@ Process listings in batches if dataset is very large.
 ### Missing dependencies
 Run `npm install` to ensure all packages are installed.
 
-## 📝 Best Practices
+## Best Practices
 
 1. **Cache API results**: Geospatial data is cached automatically
 2. **Data quality**: Review validation report before training
@@ -264,7 +264,7 @@ Run `npm install` to ensure all packages are installed.
 4. **Hyperparameter tuning**: Adjust nEstimators, maxDepth
 5. **Cross-validation**: Implement k-fold for robust evaluation
 
-## 🎯 Use Cases
+## Use Cases
 
 1. **Investment Analysis**: Identify high-potential properties
 2. **Pricing Strategy**: Predict optimal rates
@@ -272,7 +272,7 @@ Run `npm install` to ensure all packages are installed.
 4. **Portfolio Optimization**: Compare multiple properties
 5. **Market Research**: Understand demand drivers
 
-## 📚 Technical Stack
+## Technical Stack
 
 - **Runtime**: Node.js (ES Modules)
 - **ML Library**: random-forest-classifier
@@ -280,7 +280,7 @@ Run `npm install` to ensure all packages are installed.
 - **Caching**: node-cache
 - **Data Format**: JSON/JSONL
 
-## 🤝 Contributing
+## Contributing
 
 Feel free to extend this pipeline:
 - Add more feature engineering techniques
@@ -288,14 +288,14 @@ Feel free to extend this pipeline:
 - Integrate other geospatial APIs
 - Add visualization capabilities
 
-## 📄 License
+## License
 
 MIT
 
-## 👨‍💻 Author
+##  Author
 
 Built by a senior data engineer and ML engineer for production use.
 
 ---
 
-**Happy Investing! 🚀**
+**Happy Investing!**
